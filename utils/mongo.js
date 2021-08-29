@@ -6,5 +6,6 @@ const mongoObject = {
   useCreateIndex: true,
   useFindAndModify: false,
   useUnifiedTopology: true,
+
 };
 module.exports = { mongoUrl, mongoObject };

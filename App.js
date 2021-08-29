@@ -33,7 +33,7 @@ app.use(requestLogger);
 // app.use(limiter);
 // app.use(helmet());
 app.use(express.urlencoded({ extended: true }));
-app.use(express.json());
+app.use(express.json({ limit: '200Kb' }));
 
 app.use(routes);
 app.use(errorLogger);

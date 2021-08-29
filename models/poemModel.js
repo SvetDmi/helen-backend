@@ -1,8 +1,10 @@
 const mongoose = require('mongoose');
 
+
 const poemSchema = new mongoose.Schema({
   title: {
     type: String,
+    default: '* * *',
     // required: true,
   },
   text: {
@@ -13,14 +15,23 @@ const poemSchema = new mongoose.Schema({
     type: String,
     // required: true,
   },
+  year: {
+    type: Number,
+    minlength: 4,
+    maxlength: 4,
+    // required: true,
+  },
   image: {
     type: String,
     // required: true,
   },
-  tags: [{
-    type: String,
+  tags: {
+    type: Array,
     // required: true,
-  }],
+  },
+  series: {
+    type: Array,
+  },
   createAt: {
     type: Date,
     default: Date.now,

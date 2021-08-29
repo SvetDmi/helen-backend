@@ -4,8 +4,8 @@ const { createPoem, getPoems, editPoem, getPoem, deletePoem } = require('../cont
 
 router.get('/poems', getPoems);
 router.post('/poems', createPoem);
-router.patch('/poems/:id', editPoem);
 router.get('/poems/:id', getPoem);
+router.patch('/poems/:id', editPoem);
 router.delete('/poems/:id', deletePoem);
 
 module.exports = router;
