@@ -1,6 +1,5 @@
 const Poem = require('../models/poemModel');
-const ErrorBadRequest400 = require('../errors/ErrorBadRequest400');
-const ErrorNotFound404 = require('../errors/ErrorNotFound404');
+const {ErrorBadRequest400, ErrorNotFound404} = require('../errors/index');
 
 const getPoems = (req, res, next) => {
   Poem.find({}).sort('-createAt')

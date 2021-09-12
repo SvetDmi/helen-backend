@@ -30,7 +30,8 @@ const poemSchema = new mongoose.Schema({
     // required: true,
   },
   series: {
-    type: Array,
+    // type: Array,
+    type: String,
   },
   createAt: {
     type: Date,
