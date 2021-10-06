@@ -1,6 +1,8 @@
 const router = require('express').Router();
+// const auth = require('../middlewares/auth');
 
-const { createPoem,
+const {
+  createPoem,
   editPoem,
   deletePoem,
 } = require('../controllers/poems.js');

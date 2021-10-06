@@ -1,6 +1,6 @@
 const appListen = 'App listening on port';
 const movieDelete = 'Удален фильм';
-const emailConflict = 'уже зарегистрирован';
+const loginConflict = 'уже зарегистрирован';
 const authError = 'Неправильный email или пароль';
 const badRequest = 'Проверьте правильность введенных данных';
 const movieNotFound = 'Фильм с таким id отсутствует';
@@ -12,10 +12,11 @@ const emailNovalid = 'Невалидный email';
 const urlNovalid = 'Невалидный URL';
 const nameMin = 'Минимум 2 символа';
 const nameMax = 'Максимум 30 символов';
+const ImageTooLarge = 'Картинка слишком большая - до 100 Кб, оптимальная ширина 333px';
 
 module.exports = {
   appListen,
-  emailConflict,
+  loginConflict,
   authError,
   badRequest,
   movieNotFound,
@@ -28,4 +29,5 @@ module.exports = {
   urlNovalid,
   nameMin,
   nameMax,
+  ImageTooLarge,
 };
