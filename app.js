@@ -13,7 +13,7 @@ const routes = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 const errorHandler = require('./middlewares/errorHandler');
 
-const { PORT = 4000 } = process.env;
+const { PORT = 5000 } = process.env;
 const app = express();
 
 mongoose.connect(mongoUrl, mongoObject);

@@ -3,7 +3,7 @@ const { ErrorUnauthorized401 } = require('../errors/index');
 const { JWT_SECRET } = require('../utils/config');
 const { unauthorized } = require('../utils/answers');
 
-// const { NODE_ENV, JWT_SECRET } = process.env;
+const { NODE_ENV, JWT_SECRET } = process.env;
 
 module.exports = (req, res, next) => {
   const { authorization } = req.headers;
