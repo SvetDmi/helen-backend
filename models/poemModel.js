@@ -5,21 +5,21 @@ const poemSchema = new mongoose.Schema({
   title: {
     type: String,
     default: '* * *',
-    // required: true,
+    required: true,
   },
   text: {
     type: String,
-    // required: true,
+    required: true,
   },
   wrote: {
     type: String,
-    // required: true,
+    required: true,
   },
   year: {
     type: Number,
     minlength: 4,
     maxlength: 4,
-    // required: true,
+    required: true,
   },
   image: {
     type: String,
@@ -27,7 +27,7 @@ const poemSchema = new mongoose.Schema({
   },
   tags: {
     type: Array,
-    // required: true,
+    required: true,
   },
   series: {
     // type: Array,

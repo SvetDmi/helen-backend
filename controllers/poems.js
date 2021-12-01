@@ -47,9 +47,8 @@ const createPoem = (req, res, next) => {
     .then((card) => {
       if (!card) {
         throw new ErrorBadRequest400('Проверьте правильность введенных данных');
-      } {
-        return res.status(200)
-          .send(card);
+      } else {
+        return res.status(200).send(card);
       }
     })
     .catch(next);
@@ -74,10 +73,10 @@ const editPoem = (req, res, next) => {
     tags,
     series,
   },
-  {
-    new: true,
-    runValidators: true,
-  })
+    {
+      new: true,
+      runValidators: true,
+    })
     .then((card) => res.status(200)
       .send(card))
     .catch(next);

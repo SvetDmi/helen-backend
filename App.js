@@ -7,7 +7,7 @@ const cors = require('cors');
 // const limiter = require('./utils/limiter');
 
 const { mongoUrl, mongoObject } = require('./utils/mongo');
-const {appListen} = require('./utils/answers')
+const { appListen } = require('./utils/answers')
 
 const routes = require('./routes/index');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
@@ -17,12 +17,6 @@ const { PORT = 4000 } = process.env;
 const app = express();
 
 mongoose.connect(mongoUrl, mongoObject);
-// mongoose.connect('mongodb://localhost:27017/poemdb', {
-//   useNewUrlParser: true,
-//   useCreateIndex: true,
-//   useFindAndModify: false,
-//   useUnifiedTopology: true,
-// });
 
 mongoose.connection.on('connected', () => {
   console.log('Mongodb connected');
@@ -35,7 +29,8 @@ app.use(requestLogger);
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json({ limit: '200Kb' }));
 
-app.use(routes);
+// app.use(routes);
+app.use('/api', routes);
 app.use(errorLogger);
 app.use(errorHandler);
 

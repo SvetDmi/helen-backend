@@ -3,20 +3,19 @@ const mongoose = require('mongoose');
 
 // const bcrypt = require('bcrypt');
 
-const userSchema = new mongoose.Schema({
+const seriesSchema = new mongoose.Schema({
 
-  login: {
+  myId: {
+    type: Number,
+    required: true,
+    unique: true,
+  },
+  value: {
     type: String,
     required: true,
     unique: true,
   },
-  password: {
-    type: String,
-    required: true,
-    // select: false,
-    // minlength: 8,
-  },
 
 });
 
-module.exports = mongoose.model('user', userSchema);
+module.exports = mongoose.model('serie', seriesSchema);

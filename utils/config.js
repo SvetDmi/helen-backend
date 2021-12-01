@@ -8,9 +8,11 @@
 
 const config = {
   JWT_SECRET: 'secret',
-  JWT_TIME: '7d',
+  JWT_TIME: '14d',
   ADMIN_LOGIN1: 'admin',
 
 };
+
+
 
 module.exports = config;
