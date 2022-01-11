@@ -15,6 +15,7 @@ const postNewsblock = (req, res, next) => {
     link
   } = req.body;
   return Newsblock.findOneAndUpdate(name, {
+    name,
     time,
     title,
     adress,
@@ -32,8 +33,7 @@ const postNewsblock = (req, res, next) => {
 const getNewsblock = (req, res, next) => {
   Newsblock.find({})
 
-    .then((item) => res.status(200)
-      .send(item))
+    .then((item) => res.status(200).send(item))
     .catch(next);
 };
 
